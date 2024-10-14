@@ -1,12 +1,9 @@
 @props(['status'])
-
-<span 
+<span
     {{ $attributes->class([
         'rounded-full font-bold text-center uppercase py-[6px] px-[14px] text-[12px] tracking-wide',
         'bg-[#C0F7B4] text-[#1D8338]' => $status == App\ProjectStatus::Open,
-        'bg-[#FEE2E2] text-[#C53030]' => $status == App\ProjectStatus::Closed,
-        ])}}
-
-class=" ">
-    {{ $status->label()}}
+        'bg-[#FECDD3] text-[#881337]' => $status == App\ProjectStatus::Closed,
+    ]) }}>
+    {{ $status->label() }}
 </span>
